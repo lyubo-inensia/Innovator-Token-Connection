@@ -25,6 +25,8 @@ info.setProperty("license_info", inn.getConnection().GetLicenseInfo());<br/>
 return info;<br/>
 ```
 <br/>
-The token could be passes via url parameter. It can be retrieved in every server method using ```cs HttpContext.Current.Request.Headers["Authorization"]; ```
-Example:<br/>
+The token could be passes via url parameter. It can be retrieved in every server method using <br/>
+```cs HttpContext.Current.Request.Headers["Authorization"]; ```
+<br/>
+Example url:<br/>
 http://my_api_url/?token=12337y24987374ab66....
