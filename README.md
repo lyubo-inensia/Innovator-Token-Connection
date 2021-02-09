@@ -7,6 +7,8 @@ Using this class you can connect custom APIs using already established user Inno
 ### Custom API configuration
 Use TokenHttpConnection instance to create Innovator class:
 ```cs
+// The token is retrieved from the url with wich the has been called eg. http://my_api_url/?token=12337y24987374ab66....
+// url argument is the Aras Innovator url without any paths eg.: /client, /server, oauth etc.
 Innovator ret = IomFactory.CreateInnovator(new TokenHttpConnection(token, url));
 ```
 ### Innovator configuration
@@ -23,6 +25,6 @@ info.setProperty("license_info", inn.getConnection().GetLicenseInfo());<br/>
 return info;<br/>
 ```
 <br/>
-The token must be passes via "token" url parameter. It can be retrieved in server method using HttpContext.Current.Request.Headers["Authorization"]
+The token could be passes via url parameter. It can be retrieved in every server method using ```cs HttpContext.Current.Request.Headers["Authorization"]; ```
 Example:<br/>
 http://my_api_url/?token=12337y24987374ab66....
